@@ -1,0 +1,64 @@
+{
+  "plugins": [
+    {
+      "id": "baskasite0",
+      "name": "baskasite0",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://github.com/baris/plugin-repo",
+        "branch": "main",
+        "file": "baskasite0/BaskaSitePlugin0jss"
+      }
+    },
+    {
+      "id": "baskasite",
+      "name": "Baska Site",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://github.com/baris/plugin-repo",
+        "branch": "main",
+        "file": "baskasite/BaskaSitePlugin.js"
+      }
+    },
+    {
+      "id": "baskasite1",
+      "name": "Baska Site 1",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://github.com/baris/plugin-repo",
+        "branch": "main",
+        "file": "baskasite1/BaskaSite1Plugin.js"
+      }
+    },
+    {
+      "id": "baskasite2",
+      "name": "Baska Site 2",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://github.com/baris/plugin-repo",
+        "branch": "main",
+        "file": "baskasite2/BaskaSite2Plugin.js"
+      }
+    },
+    {
+      "id": "baskasite3",
+      "name": "Baska Site 3",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://github.com/baris/plugin-repo",
+        "branch": "main",
+        "file": "baskasite3/BaskaSite3Plugin.js"
+      }
+    }
+  ]
+}
