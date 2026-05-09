@@ -1,9 +1,9 @@
 // Plugin environment provides a global `engine` object.
 // The plugin MUST assign a class/constructor to `module.exports`.
 
-class ExamplePlugin1 {
+class BaskaSite0 {
     constructor() {
-        this.name = "ExamplePlugin1";
+        this.name = "Baskasite0";
         this.domain = "MUSIC"; // DomainType.MUSIC equivalent
         this.baseUrl = "https://example-plugin1.com";
     }
@@ -18,8 +18,8 @@ class ExamplePlugin1 {
         // Mock response
         return [
             {
-                id: "example-id-1",
-                title: `${query} (Example Plugin Result)`,
+                id: "baskasite0-id-1",
+                title: `${query} (Baskasite0 Result)`,
                 artist: "Plugin Artist",
                 url: `${this.baseUrl}/item/1`,
                 type: "CHORD" // ContentType.CHORD
