@@ -46,7 +46,7 @@ class ExamplePlugin1 {
             title: "Example Title",
             artist: "Plugin Artist",
             content: content,
-            type: "CHORD"
+            type: "CHORD - update deneme"
         };
     }
 }
