@@ -7,7 +7,7 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://github.com/baris/plugin-repo",
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite0.js",
         "branch": "main",
         "file": "baskasite0/BaskaSitePlugin0jss"
       }
@@ -19,7 +19,7 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://github.com/baris/plugin-repo",
+       "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite.js",
         "branch": "main",
         "file": "baskasite/BaskaSitePlugin.js"
       }
@@ -31,7 +31,7 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://github.com/baris/plugin-repo",
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite1.js",
         "branch": "main",
         "file": "baskasite1/BaskaSite1Plugin.js"
       }
@@ -43,7 +43,7 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://github.com/baris/plugin-repo",
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite2.js",
         "branch": "main",
         "file": "baskasite2/BaskaSite2Plugin.js"
       }
@@ -55,7 +55,7 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://github.com/baris/plugin-repo",
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite3.js",
         "branch": "main",
         "file": "baskasite3/BaskaSite3Plugin.js"
       }
