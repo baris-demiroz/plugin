@@ -51,4 +51,4 @@ class BaskaSite0 {
     }
 }
 
-module.exports = ExamplePlugin1;
+module.exports = BaskaSite0;
