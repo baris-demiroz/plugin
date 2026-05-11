@@ -18,7 +18,7 @@ class Site2 {
         // Mock response
         return [
             {
-                id: "site2-1",
+                id: "site2",
                 title: `${query} (site2 Result)`,
                 artist: "Plugin Artist",
                 url: `${this.baseUrl}/item/1`,
