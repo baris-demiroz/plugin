@@ -1,0 +1,28 @@
+{
+  "plugins": [
+    {
+      "id": "site1",
+      "name": "Site1",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite0.js",
+        "branch": "main",
+        "file": "baskasite0/BaskaSitePlugin.js"
+      }
+    },
+    {
+      "id": "site2",
+      "name": "Site2",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+       "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite.js",
+        "branch": "main",
+        "file": "baskasite/BaskaSitePlugin.js"
+      }
+    }
+  ]
+}
