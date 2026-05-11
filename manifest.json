@@ -7,11 +7,10 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite0.js",
-        "branch": "main",
-        "file": "baskasite0/BaskaSitePlugin0jss"
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite0.js"
       }
     },
+
     {
       "id": "baskasite",
       "name": "Baska Site",
@@ -19,11 +18,10 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-       "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite.js",
-        "branch": "main",
-        "file": "baskasite/BaskaSitePlugin.js"
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite.js"
       }
     },
+
     {
       "id": "baskasite1",
       "name": "Baska Site 1",
@@ -31,11 +29,10 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite1.js",
-        "branch": "main",
-        "file": "baskasite1/BaskaSite1Plugin.js"
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite1.js"
       }
     },
+
     {
       "id": "baskasite2",
       "name": "Baska Site 2",
@@ -43,11 +40,10 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite2.js",
-        "branch": "main",
-        "file": "baskasite2/BaskaSite2Plugin.js"
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite2.js"
       }
     },
+
     {
       "id": "baskasite3",
       "name": "Baska Site 3",
@@ -55,22 +51,19 @@
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite3.js",
-        "branch": "main",
-        "file": "baskasite3/BaskaSite3Plugin.js"
-      },
-       {
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite3.js"
+      }
+    },
+
+    {
       "id": "Deneme",
       "name": "Deneme",
       "version": "1.0.0",
       "domain": "MUSIC",
       "entry": {
         "type": "github",
-        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/Deneme.js",
-        "branch": "main",
-        "file": "Deneme/Deneme.js"
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/Deneme.js"
       }
-    }
     }
   ]
 }
