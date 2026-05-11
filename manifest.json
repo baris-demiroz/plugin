@@ -58,7 +58,19 @@
         "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/BaskaSite3.js",
         "branch": "main",
         "file": "baskasite3/BaskaSite3Plugin.js"
+      },
+       {
+      "id": "Deneme",
+      "name": "Deneme",
+      "version": "1.0.0",
+      "domain": "MUSIC",
+      "entry": {
+        "type": "github",
+        "url": "https://raw.githubusercontent.com/baris-demiroz/plugin/main/Deneme.js",
+        "branch": "main",
+        "file": "Deneme/Deneme.js"
       }
+    }
     }
   ]
 }
