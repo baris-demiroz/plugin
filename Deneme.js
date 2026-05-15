@@ -55,7 +55,37 @@ class Deneme {
             });
         });
 
-        return results.slice(0, 20);
+        return results;
+    }
+
+    async getArtistsSongs(url) {
+
+          engine.log(`[Deneme] GET ARTISTS SONGS: ${url}`);
+
+    const html = await engine.fetch(url);
+    const $ = engine.parseHTML(html);
+
+    const results = [];
+
+
+        $("ul li a").each((_, el) => {
+            const href  = $(el).attr("href")?.trim();
+            const title = $(el).find(".title").text().trim();
+
+            if (!href || !title) return;
+
+            results.push({
+                id:       href,
+                title,
+                artist:   title.split(" - ")[0] || "Unknown",
+                url:      href.startsWith("http") ? href : `${this.baseUrl}${href}`,
+                type:     "CHORD",
+                domain:   "MUSIC",
+                provider: this.name
+            });
+        });
+
+        return results;
     }
 
     async get(id) {
