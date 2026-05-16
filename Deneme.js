@@ -15,7 +15,7 @@
  */
 class Deneme {
     constructor() {
-        this.name   = "Deneme";
+        this.name = "Deneme";
         this.domain = "MUSIC";
 
         // Şifrelenmiş baseUrl — engine.resolve() çözer
@@ -25,32 +25,48 @@ class Deneme {
 
     getType(url) {
         if (url.includes("/akor-tab/")) return "ARTIST";
-        if (url.includes("/akor/"))     return "CHORD";
+        if (url.includes("/akor/")) return "CHORD";
         return "CHORD";
     }
 
     async search(query) {
         engine.log(`[Deneme] Searching: ${query}`);
 
-        const url  = `${this.baseUrl}/ara/${encodeURIComponent(query)}`;
+        const url = `${this.baseUrl}/ara/${encodeURIComponent(query)}`;
         const html = await engine.fetch(url);
-        const $    = engine.parseHTML(html);
+        const $ = engine.parseHTML(html);
 
         const results = [];
 
-        $("ul li a").each((_, el) => {
-            const href  = $(el).attr("href")?.trim();
+         const containers = $("div.list-list.list-open");
+        let container = null;
+
+        containers.each((_, el) => {
+            const elContainer = $(el);
+
+            if (elContainer.find("ul li a").length > 0) {
+                container = elContainer;
+                return false;
+            }
+        });
+
+        if (!container) return results;
+
+
+
+        container.find("ul li a").each((_, el) => {
+            const href = $(el).attr("href")?.trim();
             const title = $(el).find(".title").text().trim();
 
             if (!href || !title) return;
 
             results.push({
-                id:       href,
+                id: href,
                 title,
-                artist:   title.split(" - ")[0] || "Unknown",
-                url:      href.startsWith("http") ? href : `${this.baseUrl}${href}`,
-                type:     this.getType(href),
-                domain:   "MUSIC",
+                artist: title.split(" - ")[0] || "Unknown",
+                url: href.startsWith("http") ? href : `${this.baseUrl}${href}`,
+                type: this.getType(href),
+                domain: "MUSIC",
                 provider: this.name
             });
         });
@@ -60,28 +76,41 @@ class Deneme {
 
     async getArtistsSongs(url) {
 
-          engine.log(`[Deneme] GET ARTISTS SONGS: ${url}`);
+        engine.log(`[Deneme] GET ARTISTS SONGS: ${url}`);
 
-    const html = await engine.fetch(url);
-    const $ = engine.parseHTML(html);
+        const html = await engine.fetch(url);
+        const $ = engine.parseHTML(html);
 
-    const results = [];
-        const container = $(".list-list.list-open.split-2");
+        const results = [];
+        const containers = $("div.list-list.list-open");
+        let container = null;
+
+        containers.each((_, el) => {
+            const elContainer = $(el);
+
+            if (elContainer.find("ul li a").length > 0) {
+                container = elContainer;
+                return false;
+            }
+        });
+
+        if (!container) return results;
 
 
-       container.find("ul li a").each((_, el) => {
-            const href  = $(el).attr("href")?.trim();
+
+        container.find("ul li a").each((_, el) => {
+            const href = $(el).attr("href")?.trim();
             const title = $(el).find(".title").text().trim();
 
             if (!href || !title) return;
 
             results.push({
-                id:       href,
+                id: href,
                 title,
-                artist:   title.split(" - ")[0] || "Unknown",
-                url:      href.startsWith("http") ? href : `${this.baseUrl}${href}`,
-                type:     "CHORD",
-                domain:   "MUSIC",
+                artist: title.split(" - ")[0] || "Unknown",
+                url: href.startsWith("http") ? href : `${this.baseUrl}${href}`,
+                type: "CHORD",
+                domain: "MUSIC",
                 provider: this.name
             });
         });
@@ -98,21 +127,21 @@ class Deneme {
         }
 
         const html = await engine.fetch(url);
-        const $    = engine.parseHTML(html);
+        const $ = engine.parseHTML(html);
 
         const h1Text = $("h1").first().text().trim() || $("title").text().trim();
-        const parts  = h1Text.split(" - ");
+        const parts = h1Text.split(" - ");
 
-        const artist  = parts.length > 1 ? parts[0]    : "Unknown";
-        const title   = parts.length > 1 ? parts[1]    : h1Text;
+        const artist = parts.length > 1 ? parts[0] : "Unknown";
+        const title = parts.length > 1 ? parts[1] : h1Text;
         const content = $("pre").first().text()?.trim() || "";
 
         return {
             title,
             artist,
             content,
-            type:     "CHORD",
-            domain:   "MUSIC",
+            type: "CHORD",
+            domain: "MUSIC",
             provider: this.name
         };
     }
