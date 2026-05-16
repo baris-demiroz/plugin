@@ -66,9 +66,10 @@ class Deneme {
     const $ = engine.parseHTML(html);
 
     const results = [];
+        const container = $(".list-list.list-open.split-2");
 
 
-        $("ul li a").each((_, el) => {
+       container.find("ul li a").each((_, el) => {
             const href  = $(el).attr("href")?.trim();
             const title = $(el).find(".title").text().trim();
 
